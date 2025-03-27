@@ -34,5 +34,5 @@ void saveExit(slist* list);
 void addRecord(slist* list, sentry* pointer);
 void displayRecords(slist* list);
 void displayRecord(const slist* list, const int place);
-
+void deleteRecord(slist* list, const int place);
 #endif 

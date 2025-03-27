@@ -1,7 +1,7 @@
 #include "hw06.h"
 
 
-void addRecord(slist* list,sentry* pointer){
+void addRecord(slist* list,sentry* pointer, const int position){
 	list-> length += 1;
 	sentry* previous = nullptr;
 
@@ -9,7 +9,7 @@ void addRecord(slist* list,sentry* pointer){
 		list -> first = pointer;
 		list -> last = pointer;
 	}
-	else{
+	else if(slist -> length = position-1){
 		sentry* count = list -> first;
 		while(count != nullptr){
 			previous = count; 
@@ -21,4 +21,13 @@ void addRecord(slist* list,sentry* pointer){
 		list -> last = pointer;
 	
 	}	
+
+
+	else if(position == 1){
+		
+	
+	
+	
+	
+	}
 }

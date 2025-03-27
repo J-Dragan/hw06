@@ -13,8 +13,12 @@ int main(){
 		if(choice == 1){
 			pointer = populateList(list);
 			addRecord(list, pointer);
-	
-	
+		}
+		if(choice == 2){
+			int place;
+			std::cout << "enter the position:";
+			std::cin >> place;
+			deleteRecord(list, place);
 		}
 
 		if(choice == 3){
@@ -22,29 +26,11 @@ int main(){
 			std::cout << "enter the records position:";
 			std::cin >> place;
 			displayRecord(list, place);
-		
-		
 		}
 		
 		if(choice == 4){
-			displayRecords(list);
-		
-		
-		
-		
-		
+			displayRecords(list);		
 		}
-
-
-
-
-
-
-
-
-
-
-
 
 	}
 	
