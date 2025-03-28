@@ -5,26 +5,27 @@ int main(){
 	list->length = 0;
 	list-> first = nullptr;
 	list -> last  = nullptr;
-	sentry* pointer = new sentry();
-	int choice=1;
+	sentry* pointer = nullptr;
+	int choice=1, place = 0;
 	while(choice !=5){
 		choice = menu();
 	
 		if(choice == 1){
 			pointer = populateList(list);
-			addRecord(list, pointer);
+			std::cout << "chose the position:";
+			std::cin >> place;
+			addRecord(list, pointer, place);
 		}
 		if(choice == 2){
-			int place;
 			std::cout << "enter the position:";
 			std::cin >> place;
 			deleteRecord(list, place);
 		}
 
 		if(choice == 3){
-			int place = 0;
 			std::cout << "enter the records position:";
 			std::cin >> place;
+			std::cout << std::endl;
 			displayRecord(list, place);
 		}
 		
@@ -41,6 +42,8 @@ int main(){
 	
 	if(choice == 5){
 		saveExit(list);
+		delete list;
+		//delete pointer;	
 	}
 
 }

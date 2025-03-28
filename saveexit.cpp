@@ -53,17 +53,20 @@ void saveExit(slist* list) {
     }
 
     sentry* head = list->first;  
+    bookData* info = nullptr;
+    sentry* nextt = nullptr;
 
     while (head != nullptr) {  
-        bookData* info = head->data;
-
+        info = head->data;
+	nextt = head->next;
         if (info != nullptr) {
             myfile << info->isbn << std::endl;
             myfile << info->author << std::endl;
             myfile << info->title << std::endl << std::endl;
         }
-
-        head = head->next;
+	delete head -> data;
+	delete head;
+        head = nextt;
     }
 
     myfile.close();

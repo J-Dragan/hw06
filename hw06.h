@@ -31,7 +31,7 @@ struct slist{
 int menu();
 sentry* populateList(slist* lisT);
 void saveExit(slist* list);
-void addRecord(slist* list, sentry* pointer);
+void addRecord(slist* list, sentry* pointer, const int position);
 void displayRecords(slist* list);
 void displayRecord(const slist* list, const int place);
 void deleteRecord(slist* list, const int place);
